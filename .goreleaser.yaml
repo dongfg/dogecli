@@ -27,7 +27,8 @@ builds:
     goarm:
       - "6"
       - "7"
-
+    ldflags:
+      - -s -w -X github.com/dongfg/dogecli/internal/constants.Version={{.Version}}
 archives:
   - formats: [tar.gz]
     # this name template makes the OS and Arch compatible with the results of `uname`.
