@@ -1,8 +1,9 @@
 package constants
 
+var Version = "dev"
+
 const (
 	CLIName      = "dogecli"
-	Version      = "dev"
 	VerboseMode  = "verbose"
 	ApiHost      = "https://api.dogecloud.com"
 	EnvAccessKey = "ACCESS_KEY"
