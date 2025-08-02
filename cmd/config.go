@@ -3,12 +3,13 @@ package cmd
 import (
 	"bufio"
 	"fmt"
-	"github.com/dongfg/dogecli/internal/constants"
-	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 	"os"
 	"path"
 	"strings"
+
+	"github.com/dongfg/dogecli/internal/constants"
+	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 func init() {
@@ -46,7 +47,7 @@ var configCmd = &cobra.Command{
 			return err
 		}
 		dir := path.Join(home, ".", constants.CLIName)
-		if err := os.MkdirAll(dir, 0700); err != nil {
+		if err := os.MkdirAll(dir, 0o700); err != nil {
 			return err
 		}
 		cfgPath := path.Join(dir, "config.yaml")

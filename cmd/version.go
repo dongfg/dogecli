@@ -2,8 +2,8 @@ package cmd
 
 import (
 	"fmt"
-	"github.com/dongfg/dogecli/internal/constants"
 
+	"github.com/dongfg/dogecli/internal/constants"
 	"github.com/spf13/cobra"
 )
 

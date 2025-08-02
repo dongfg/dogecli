@@ -2,14 +2,14 @@ package cmd
 
 import (
 	"fmt"
+	"os"
+
 	"github.com/dongfg/dogecli/internal/client"
 	"github.com/dongfg/dogecli/internal/config"
 	"github.com/dongfg/dogecli/internal/constants"
 	"github.com/dongfg/dogecli/internal/logger"
-	"os"
-
 	"github.com/spf13/cobra"
-	_ "github.com/spf13/viper"
+	"github.com/spf13/viper"
 )
 
 var (
@@ -37,4 +37,9 @@ func Execute() {
 func init() {
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "",
 		fmt.Sprintf("config file (default is $HOME/.%s/config.yaml)", constants.CLIName))
+	rootCmd.PersistentFlags().BoolP("verbose", "v", false, "enable verbose output")
+	_ = viper.BindPFlag(
+		constants.VerboseMode,
+		rootCmd.PersistentFlags().Lookup(constants.VerboseMode),
+	)
 }

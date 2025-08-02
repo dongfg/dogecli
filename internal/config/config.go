@@ -2,10 +2,11 @@ package config
 
 import (
 	"fmt"
-	"github.com/dongfg/dogecli/internal/constants"
-	"github.com/spf13/viper"
 	"os"
 	"path"
+
+	"github.com/dongfg/dogecli/internal/constants"
+	"github.com/spf13/viper"
 )
 
 // Init loads configuration from file and environment
@@ -28,8 +29,5 @@ func Init(cfgFile string) {
 	viper.SetEnvPrefix("DOGECLI")
 	_ = viper.BindEnv(constants.EnvAccessKey)
 	_ = viper.BindEnv(constants.EnvSecretKey)
-
-	if err := viper.ReadInConfig(); err != nil {
-		// Ignoring if config not found
-	}
+	_ = viper.ReadInConfig()
 }

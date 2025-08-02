@@ -3,6 +3,7 @@ package constants
 const (
 	CLIName      = "dogecli"
 	Version      = "dev"
+	VerboseMode  = "verbose"
 	ApiHost      = "https://api.dogecloud.com"
 	EnvAccessKey = "ACCESS_KEY"
 	EnvSecretKey = "SECRET_KEY"
