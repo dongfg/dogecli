@@ -1,6 +1,10 @@
 dogecli
 > 多吉云基础型云储存管理工具
 
+## 开发背景 
+- 云基础型云存储 “仅支持在控制台上传文件，使用加速域名访问、下载文件。不支持使用 SDK 访问，不支持图片处理、镜像存储、生命周期等高级功能。”
+- [多吉云 API 文档](https://docs.dogecloud.com/oss/api-introduction)
+
 ## 安装
 
 go install
@@ -17,6 +21,11 @@ curl -sSL https://raw.githubusercontent.com/dongfg/dogecli/refs/heads/master/scr
 or [download binary](https://github.com/dongfg/dogecli/releases)
 
 ## 使用
+### 功能列表
+- [x] list-bucket 查询所有 bucket
+- [x] list 列出 bucket 下的文件
+- [x] copy 上传文件到 bucket
+- [x] fetch 下载远程文件到 bucket
 
 > 先使用 dogecli config 进行配置
 
