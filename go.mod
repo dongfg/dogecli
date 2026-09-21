@@ -3,7 +3,7 @@ module github.com/dongfg/dogecli
 go 1.25.0
 
 require (
-	github.com/dustin/go-humanize v1.0.1
+	github.com/dustin/go-humanize v1.1.0
 	github.com/eiannone/keyboard v0.0.0-20220611211555-0d226195f203
 	github.com/olekukonko/tablewriter v1.1.4
 	github.com/schollz/progressbar/v3 v3.19.1
